@@ -19,13 +19,20 @@ return (
   <div className="App">
     {
       print?
-      <h1>{data}</h1>
+      <h1>Ava</h1>
       :null
     }
-    <input type="text" onChange={getData}/>
+    
     <button onClick={()=>setPrint(true)}>
-Click here
+Show
     </button>
+    <button onClick={()=>setPrint(false)}>
+Hide
+    </button>
+    <button onClick={()=>setPrint(!print)}>
+Toggle
+    </button>
+    
     <User name ="Ava"/>
     
   </div>
