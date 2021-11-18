@@ -2,19 +2,18 @@ import './App.css';
 
 import User from './User';
 import logo from './logo.svg';
+import { useState } from 'react';
 
 function App() {
-  let data="Anika";
-  function Apple(){
-        alert("Hello");
-      }
-  
+  const [data,setData] = useState("Ava")
+  function setUpdate(){
+setData("Anika")
+  }
   return (
     <div className="App">
       <h3>{data}</h3>
-      <button onClick={Apple}>
-Click here
-      </button>
+      <button onClick={setUpdate}>Update</button>
+
       <User/>
       
     </div>
