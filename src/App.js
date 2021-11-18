@@ -28,7 +28,7 @@ class App extends Component {
           <button onClick={()=>this.setUpdate()}>
     Click here
           </button>
-          <User/>
+          <User name ="Ava"/>
           
         </div>
       );
