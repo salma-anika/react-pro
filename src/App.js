@@ -6,34 +6,30 @@ import User from './User';
 import logo from './logo.svg';
 import { useState } from 'react';
 
-class App extends Component {
+function App() {
 
-  constructor(){
-    super();
-    this.state={
-    data:0
-  }
+const [data, setData] = useState(null)
+const [print, setPrint] = useState(false)
 
+function getData(val) {
+  setData(val.target.value);
+  setPrint(false);
 }
-
- setUpdate(){
-   this.setState({data: this.state.data+1})
-  alert("Anika")
+return (
+  <div className="App">
+    {
+      print?
+      <h1>{data}</h1>
+      :null
     }
-
-    render() {
-      return (
-        <div className="App">
-          <h3>{this.state.data}</h3>
-          <button onClick={()=>this.setUpdate()}>
-    Click here
-          </button>
-          <User name ="Ava"/>
-          
-        </div>
-      );
-
-    }
-
+    <input type="text" onChange={getData}/>
+    <button onClick={()=>setPrint(true)}>
+Click here
+    </button>
+    <User name ="Ava"/>
+    
+  </div>
+);
 }
+    
 export default App;
