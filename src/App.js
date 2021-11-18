@@ -3,17 +3,20 @@ import './App.css';
 import User from './User';
 import logo from './logo.svg';
 
-function Apple(){
-  return (
-    <h1>Apple</h1>
-  )
-}
 function App() {
+  let data="Anika";
+  function Apple(){
+        alert("Hello");
+      }
+  
   return (
     <div className="App">
-      <h3>Hello world</h3>
+      <h3>{data}</h3>
+      <button onClick={Apple}>
+Click here
+      </button>
       <User/>
-      {Apple()}
+      
     </div>
   );
 }
