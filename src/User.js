@@ -1,11 +1,8 @@
-import React ,{ Component } from 'react';
 
-export default class User extends Component {
-render() {
-return (
-    <h1>Welcome world</h1>
-)
 
+function User() {
+    return (
+        <div><h1>Apple</h1></div>
+    )
 }
-
-}
+export default User
